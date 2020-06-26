@@ -1,0 +1,142 @@
+@import './../colors.scss';
+
+.backgroundContainer {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+
+  .cornerFigure {
+    & > div {
+      position: absolute;
+      width: 150px;
+      height: 42px;
+    }
+
+    & > div:first-child {
+      transform: rotate(90deg);
+    }
+  }
+
+  & > .top {
+    width: 100%;
+    height: 35%;
+    display: flex;
+
+    .pinkRectangle {
+      width: 30%;
+      height: 100%;
+      background: $red;
+      position: relative;
+
+      .cornerFigure {
+        & > div {
+          background: $yellow;
+        }
+
+        & > div:first-child {
+          bottom: 54px;
+          right: -54px;
+        }
+
+        & > div:last-child {
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      .purpleSquare {
+        width: 170px;
+        height: 170px;
+        position: absolute;
+        background: $violet;
+        top: 70px;
+        left: -85px;
+      }
+
+      .whiteSquare {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        background: $white;
+        top: 150px;
+        left: -60px;
+      }
+    }
+
+    .purpleRectangle {
+      width: 70%;
+      height: 100%;
+      background: $violet;
+      position: relative;
+
+      .cornerFigure {
+        & > div {
+          background: $red;
+        }
+
+        & > div:first-child {
+          bottom: 54px;
+          left: -54px;
+        }
+
+        & > div:last-child {
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  & > .bottom {
+    width: 100%;
+    height: 65%;
+    display: flex;
+
+    & .blackRectangle {
+      width: 70%;
+      height: 100%;
+      background: $darkGrey;
+      position: relative;
+
+      .cornerFigure {
+        & > div {
+          background: $yellow;
+        }
+
+        & > div:first-child {
+          top: 54px;
+          left: -54px;
+        }
+
+        & > div:last-child {
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    & .purpleRectangle {
+      width: 30%;
+      height: 100%;
+      background: $violet;
+      position: relative;
+
+      .cornerFigure {
+        & > div {
+          background: $darkGrey;
+        }
+
+        & > div:first-child {
+          top: 54px;
+          right: -54px;
+        }
+
+        & > div:last-child {
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
