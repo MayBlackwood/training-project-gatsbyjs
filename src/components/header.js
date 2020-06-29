@@ -1,11 +1,13 @@
 import React from "react";
+import { graphql } from "gatsby";
 import "./../styles/header.scss";
 import LeftColumnBottom from "./header/leftColumnBottom";
 import Logo from "./logo";
 import Button from "./button";
 import RightColHeaderBackground from "./header/rightColHeaderBackground";
 
-export default function Header(props) {
+const Header = ({ data }) => {
+  console.log(data);
   return (
     <div className="headerContainer">
       <div className="leftColumn">
@@ -42,4 +44,22 @@ export default function Header(props) {
       </div>
     </div>
   );
-}
+};
+
+export default Header;
+
+export const query = graphql`
+  {
+    healthTechPageData: markdownRemark(
+      frontmatter: { name: { eq: "healthcare" } }
+    ) {
+      frontmatter {
+        title
+        longTitle
+        seoTitle
+        description
+        keywords
+      }
+    }
+  }
+`;

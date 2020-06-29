@@ -8,7 +8,7 @@ import Q from "./../images/Vector-4.png";
 import E from "./../images/Vector-6.png";
 import T from "./../images/Vector-7.png";
 
-export default function Logo() {
+const Logo = () => {
   return (
     <div className="logoContainer">
       <div className="dashText">
@@ -39,4 +39,6 @@ export default function Logo() {
       </div>
     </div>
   );
-}
+};
+
+export default Logo;

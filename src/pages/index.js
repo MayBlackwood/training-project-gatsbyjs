@@ -4,11 +4,13 @@ import { Link } from "gatsby";
 import "../styles/index.scss";
 import CompanyProjects from "../components/companyProjects";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="container">
       <Header />
       <CompanyProjects />
     </div>
   );
-}
+};
+
+export default Home;

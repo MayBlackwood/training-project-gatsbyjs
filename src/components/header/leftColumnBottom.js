@@ -1,7 +1,7 @@
 import React from "react";
 import "./../../styles/header/leftColumnBottom.scss";
 
-export default function LeftColumnBottom() {
+const LeftColumnBottom = () => {
   return (
     <div className="figuresContainer">
       <div className="pinkFigure"></div>
@@ -9,4 +9,6 @@ export default function LeftColumnBottom() {
       <div className="blackFigure1"></div>
     </div>
   );
-}
+};
+
+export default LeftColumnBottom;

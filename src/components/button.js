@@ -1,12 +1,12 @@
 import React from "react";
 import "./../styles/button.scss";
 
-export default function Button(props) {
-  const { type, text, onClickHandler } = props;
-  console.log(props);
+const Button = ({ type, text, onClickHandler }) => {
   return (
     <div className={`button ${type}`} onClick={onClickHandler}>
       <span>{text}</span>
     </div>
   );
-}
+};
+
+export default Button;

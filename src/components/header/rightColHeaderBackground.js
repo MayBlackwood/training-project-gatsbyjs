@@ -1,7 +1,7 @@
 import React from "react";
 import "./../../styles/header/rightColHeaderBackground.scss";
 
-export default function RightColHeaderBackground() {
+const RightColHeaderBackground = () => {
   return (
     <div className="backgroundContainer">
       <div className="top">
@@ -36,4 +36,6 @@ export default function RightColHeaderBackground() {
       </div>
     </div>
   );
-}
+};
+
+export default RightColHeaderBackground;
