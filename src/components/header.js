@@ -39,7 +39,6 @@ const Header = () => {
       <div className="leftColumn">
         <div className="headerLogoContainer">
           <Logo />
-          <div className="blackFigure3"></div>
           <BlackSquare
             position={{
               bottom: 0,
@@ -54,7 +53,6 @@ const Header = () => {
             text="Let's talk"
             onClickHandler={onButtonCLick}
           />
-          <div className="blackFigure2"></div>
           <BlackSquare
             position={{
               left: "441px",
