@@ -29,6 +29,10 @@ const Header = () => {
     },
   } = data;
 
+  const onButtonCLick = () => {
+    alert("Let's talk");
+  };
+
   return (
     <div className="headerContainer">
       <div className="leftColumn">
@@ -38,9 +42,11 @@ const Header = () => {
         </div>
         <div className="servicesInfoContainer">
           <div className="text">{longTitle}</div>
-          <div className="button">
-            <Button type="common" text="Let's talk" />
-          </div>
+          <Button
+            type="common"
+            text="Let's talk"
+            onClickHandler={onButtonCLick}
+          />
           <div className="blackFigure2"></div>
         </div>
         <div className="leftColumnBottom">
