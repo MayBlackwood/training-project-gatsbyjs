@@ -1,13 +1,34 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import "./../styles/header.scss";
 import LeftColumnBottom from "./header/leftColumnBottom";
 import Logo from "./logo";
 import Button from "./button";
 import RightColHeaderBackground from "./header/rightColHeaderBackground";
 
-const Header = ({ data }) => {
-  console.log(data);
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    {
+      healthTechPageData: markdownRemark(
+        frontmatter: { name: { eq: "healthcare" } }
+      ) {
+        frontmatter {
+          title
+          longTitle
+          seoTitle
+          description
+          keywords
+        }
+      }
+    }
+  `);
+
+  const {
+    healthTechPageData: {
+      frontmatter: { title, longTitle, description },
+    },
+  } = data;
+
   return (
     <div className="headerContainer">
       <div className="leftColumn">
@@ -16,7 +37,7 @@ const Header = ({ data }) => {
           <div className="blackFigure3"></div>
         </div>
         <div className="servicesInfoContainer">
-          <div className="text">HealthTech development Services</div>
+          <div className="text">{longTitle}</div>
           <div className="button">
             <Button type="common" text="Let's talk" />
           </div>
@@ -31,14 +52,7 @@ const Header = ({ data }) => {
         <div className="textContainer">
           <div>
             <div className="textDecoration"></div>
-            <div className="text">
-              Dashbouquet is a leading healthcare software development company.
-              We can build a custom solution for your company, develop an MVP
-              for your startup or make a final step to move your project to
-              production. We offer web and mobile apps development, UI/UX design
-              and software testing. We build HIPAA and GDPR compliant healthcare
-              software
-            </div>
+            <div className="text">{description}</div>
           </div>
         </div>
       </div>
@@ -47,19 +61,3 @@ const Header = ({ data }) => {
 };
 
 export default Header;
-
-export const query = graphql`
-  {
-    healthTechPageData: markdownRemark(
-      frontmatter: { name: { eq: "healthcare" } }
-    ) {
-      frontmatter {
-        title
-        longTitle
-        seoTitle
-        description
-        keywords
-      }
-    }
-  }
-`;
