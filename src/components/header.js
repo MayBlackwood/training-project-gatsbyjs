@@ -5,6 +5,7 @@ import LeftColumnBottom from "./header/leftColumnBottom";
 import Logo from "./logo";
 import Button from "./button";
 import RightColHeaderBackground from "./header/rightColHeaderBackground";
+import BlackSquare from "./decoration/blackSquare";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -39,6 +40,12 @@ const Header = () => {
         <div className="headerLogoContainer">
           <Logo />
           <div className="blackFigure3"></div>
+          <BlackSquare
+            position={{
+              bottom: 0,
+              left: "140px",
+            }}
+          />
         </div>
         <div className="servicesInfoContainer">
           <div className="text">{longTitle}</div>
@@ -48,6 +55,12 @@ const Header = () => {
             onClickHandler={onButtonCLick}
           />
           <div className="blackFigure2"></div>
+          <BlackSquare
+            position={{
+              left: "441px",
+              bottom: 0,
+            }}
+          />
         </div>
         <div className="leftColumnBottom">
           <LeftColumnBottom />

@@ -1,0 +1,9 @@
+@import "./../colors.scss";
+
+.blackSquare {
+  width: 40px;
+  height: 40px;
+  background: $darkGrey;
+  position: absolute;
+  z-index: 3;
+}
