@@ -37,6 +37,12 @@
       & > div:last-child {
         background: $darkGrey;
       }
+
+      .plain {
+        background: $red!important; // edit
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .icon {

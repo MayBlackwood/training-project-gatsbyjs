@@ -5,6 +5,7 @@ import "../styles/index.scss";
 import CompanyProjects from "../components/companyProjects";
 import OfferSection from "./../components/offerSection";
 import FeaturesSection from "./../components/featuresSection";
+import TechnologiesSection from "./../components/TechnologiesSection";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <CompanyProjects />
       <OfferSection />
       <FeaturesSection />
+      <TechnologiesSection />
     </div>
   );
 };
