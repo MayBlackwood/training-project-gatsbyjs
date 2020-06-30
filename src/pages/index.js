@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import "../styles/index.scss";
 import CompanyProjects from "../components/companyProjects";
 import OfferSection from "./../components/offerSection";
+import FeaturesSection from "./../components/featuresSection";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Header />
       <CompanyProjects />
       <OfferSection />
+      <FeaturesSection />
     </div>
   );
 };

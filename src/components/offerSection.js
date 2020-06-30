@@ -29,12 +29,12 @@ const OfferSection = () => {
       }
     }
   `);
+
   return (
     <div className="offerSectionContainer">
       <Heading text={longTitle} />
       <StickerCard list={list1} leftMargin={"40%"} />
       <StickerCard list={list2} leftMargin={"70%"} />
-
       <SquareDecoration
         color="violet"
         style={{
@@ -42,7 +42,7 @@ const OfferSection = () => {
           bottom: "170px",
           zIndex: 3,
           width: "140px",
-          height: "140px"
+          height: "140px",
         }}
       />
       <SquareDecoration
@@ -52,7 +52,7 @@ const OfferSection = () => {
           bottom: "150px",
           zIndex: 4,
           width: "70px",
-          height: "70px"
+          height: "70px",
         }}
       />
       <SquareDecoration
@@ -62,7 +62,7 @@ const OfferSection = () => {
           top: "150px",
           zIndex: 3,
           width: "90px",
-          height: "90px"
+          height: "90px",
         }}
       />
     </div>
