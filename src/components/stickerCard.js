@@ -6,7 +6,7 @@ const StickerCard = ({ list, leftMargin }) => {
     <div className="stickerContainer">
       <div className="listContainer" style={{ marginLeft: leftMargin }}>
         {list.map(item => {
-          return <div>{item}</div>;
+          return <div key={item}>{item}</div>;
         })}
       </div>
     </div>

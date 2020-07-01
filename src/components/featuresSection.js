@@ -36,7 +36,7 @@ const FeaturesSection = () => {
       <Heading text={longTitle} />
       <StickerCard list={list1} leftMargin={"25%"} />
       <SquareDecoration
-        color="black"
+        color="darkGrey"
         style={{
           right: "181px",
           top: "170px",

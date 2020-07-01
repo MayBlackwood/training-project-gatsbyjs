@@ -1,0 +1,31 @@
+@import "./colors.scss";
+
+.quoteContainer {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  .quoteIcon {
+    margin-bottom: 40px;
+  }
+
+  .quoteText {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: $darkGrey;
+  }
+
+  .quoteAuthor {
+    margin-top: 20px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: $lightGrey;
+  }
+}
