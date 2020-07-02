@@ -3,6 +3,8 @@
 
 .itemContainer {
   width: 50%;
+  display: flex;
+  flex-direction: column;
 
   .itemLabel {
     width: 212px;
@@ -10,36 +12,18 @@
     @include typography(Ubuntu, normal, 500, 20px, 120%, $darkGrey);
   }
 
+  .oneColored {
+    background: $red;
+  }
+
+  .twoColored {
+    background: linear-gradient(90deg, $violet 50%, $darkGrey 50%);
+  }
+
   .iconContainer {
     width: 108px;
     height: 108px;
     position: relative;
-
-    .containerBackground {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      top: 0;
-      left: 0;
-
-      & > div {
-        width: 50%;
-        height: 100%;
-      }
-
-      & > div:first-child {
-        background: $violet;
-      }
-      & > div:last-child {
-        background: $darkGrey;
-      }
-
-      .plain {
-        background: $red !important; // edit
-        width: 100%;
-        height: 100%;
-      }
-    }
 
     .icon {
       position: absolute;

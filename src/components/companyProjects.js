@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import "./../styles/companyProjects.scss";
-import ProjectItem from "./projectItem";
+import Badge from "./badge";
 
 const CompanyProjects = () => {
   const {
@@ -34,7 +34,11 @@ const CompanyProjects = () => {
         {projectTypes.map(item => {
           return (
             <div className="item" key={item.type}>
-              <ProjectItem icon={item.type} label={item.label} />
+              <Badge
+                icon={item.type}
+                label={item.label}
+                type="twoColored"
+              />
             </div>
           );
         })}

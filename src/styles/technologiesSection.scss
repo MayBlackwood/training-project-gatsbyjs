@@ -15,4 +15,14 @@
   .heading {
     align-self: center;
   }
+
+  .itemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .itemLabel {
+      text-align: center;
+    }
+  }
 }
