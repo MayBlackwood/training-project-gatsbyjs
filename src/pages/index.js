@@ -7,6 +7,7 @@ import OfferSection from "./../components/offerSection";
 import FeaturesSection from "./../components/featuresSection";
 import TechnologiesSection from "./../components/TechnologiesSection";
 import MobileDevSection from "./../components/mobileDevSection";
+import TeamSection from "./../components/TeamSection";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <FeaturesSection />
       <TechnologiesSection />
       <MobileDevSection />
+      <TeamSection />
     </div>
   );
 };

@@ -1,0 +1,50 @@
+@import "./../colors.scss";
+
+.sliderContainer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 3;
+
+  .sliderControls {
+    display: flex;
+    width: 35%;
+    height: 80px;
+    background: $darkGrey;
+    justify-content: flex-end;
+    padding: 0 30px;
+  }
+
+  .sliderContent {
+    width: 60%;
+    background-color: lightblue;
+  }
+
+  .carouselWrapper {
+    padding: 0 60px;
+    height: auto;
+    width: 55%;
+    float: right;
+
+    .rightArrow {
+      position: relative;
+
+      .arrowContainer {
+        position: absolute;
+        bottom: 10px;
+        left: -318px;
+        z-index: 5;
+      }
+    }
+
+    .leftArrow {
+      position: relative;
+      .arrowContainer {
+        position: absolute;
+        bottom: 10px;
+        left: -368px;
+        z-index: 5;
+      }
+    }
+  }
+}

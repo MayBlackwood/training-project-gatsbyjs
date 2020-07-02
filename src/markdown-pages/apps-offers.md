@@ -25,5 +25,5 @@ list:
         "Healthcare Data Analytics Solutions",
       ],
   }
-keywords: startup development company, cost of app development, cost to develop an app, custom app development company, mvp development company, mvp cost calculator, mvp development, mvp for startups, healthcare, healthcare apps, helathcare development
+keywords: startup development company, cost of app development, cost to develop an app, custom app development company, mvp development company, mvp cost calculator, mvp development, mvp for startups, healthcare, healthcare apps, healthcare development
 ---
