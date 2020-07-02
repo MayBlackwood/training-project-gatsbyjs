@@ -1,0 +1,16 @@
+@import "./../colors.scss";
+
+.inputContainer {
+  width: 170px;
+  height: 24px;
+  border: none;
+  padding: 8px 15px;
+  background: $darkText;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: $white;
+  opacity: 0.5;
+}

@@ -4,7 +4,7 @@ import Heading from "./heading";
 import Quote from "./quote";
 import "./../styles/mobileDevSection.scss";
 import iphone from "./../images/iphone.png";
-import Button from "./button";
+import Button from "./controls/button";
 import SquareDecoration from "./decoration/squareDecoration";
 
 const MobileDevSection = () => {
