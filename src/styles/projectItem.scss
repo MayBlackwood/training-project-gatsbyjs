@@ -1,17 +1,13 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 
 .itemContainer {
   width: 50%;
 
   .itemLabel {
-		width: 212px;
+    width: 212px;
     margin-top: 20px;
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 120%;
-    color: $darkGrey;
+    @include typography(Ubuntu, normal, 500, 20px, 120%, $darkGrey);
   }
 
   .iconContainer {
@@ -39,7 +35,7 @@
       }
 
       .plain {
-        background: $red!important; // edit
+        background: $red !important; // edit
         width: 100%;
         height: 100%;
       }

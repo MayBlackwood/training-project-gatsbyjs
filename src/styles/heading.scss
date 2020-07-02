@@ -1,11 +1,7 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 
 .heading {
-  font-family: Ubuntu;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 41px;
   text-align: right;
-  color: $darkGrey;
+  @include typography(Ubuntu, normal, bold, 36px, 41px, $darkGrey);
 }

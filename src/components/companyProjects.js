@@ -29,14 +29,16 @@ const CompanyProjects = () => {
 
   return (
     <div className="companyProjectsContainer">
-      <div className="item companyProjectsText">We work with</div>
-      {projectTypes.map(item => {
-        return (
-          <div className="item" key={item.type}>
-            <ProjectItem icon={item.type} label={item.label} />
-          </div>
-        );
-      })}
+      <div className="itemsWrapper">
+        <div className="item companyProjectsText">We work with</div>
+        {projectTypes.map(item => {
+          return (
+            <div className="item" key={item.type}>
+              <ProjectItem icon={item.type} label={item.label} />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
