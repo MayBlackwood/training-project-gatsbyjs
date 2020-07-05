@@ -32,9 +32,10 @@ const TechnologiesSection = () => {
     <div className="technologiesContainer">
       <Heading text={longTitle} />
       <div className="iconsContainer">
-        {technologies.map(item => {
+        {technologies.map((item, index) => {
           return (
               <Badge
+                key={index}
                 icon={item.type}
                 label={item.label}
                 type="oneColored"

@@ -35,12 +35,12 @@ const Slider = ({ items }) => {
           leftChevronWrapper: "leftArrow",
         }}
       >
-        {items.map((_, i) => (
+        {items.map((item, index) => (
           <SlideItem
-            key={i}
-            img={_.imgUrl}
-            title={_.title}
-            subtitle={_.subtitle}
+            key={index}
+            img={item.imgUrl}
+            title={item.title}
+            subtitle={item.subtitle}
           />
         ))}
       </ItemsCarousel>
