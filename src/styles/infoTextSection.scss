@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 
 .infoTextContainer {
   width: 100%;
@@ -10,12 +11,7 @@
 
   & > .text {
     width: 50%;
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 140%;
     text-align: center;
-    color: $darkGrey;
+    @include typography(Ubuntu, normal, bold, 36px, 140%, $darkGrey);
   }
 }

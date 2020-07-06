@@ -16,6 +16,7 @@ const SlideItem = ({ img, title, subtitle }) => {
         onMouseOut={() => {
           setImg(img);
         }}
+        role="complementary"
       ></div>
       <div className="slideLabel">
         <div className="title">{title}</div>

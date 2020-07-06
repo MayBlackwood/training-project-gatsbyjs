@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 
 .mobileSectionContainer {
   width: 100%;
@@ -18,13 +19,8 @@
     width: 435px;
     align-self: flex-end;
     margin: 10px 440px 78px 440px;
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
     text-align: right;
-    color: $lightGrey;
+    @include typography(Ubuntu, normal, 300, 16px, 150%, $lightGrey);
   }
 
   .reviewContainer {

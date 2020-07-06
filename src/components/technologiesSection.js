@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import "./../styles/technologiesSection.scss";
 import Heading from "./heading";
-import ProjectItem from "./projectItem";
+import Badge from "./badge";
 
 const TechnologiesSection = () => {
   const {
@@ -32,10 +32,13 @@ const TechnologiesSection = () => {
     <div className="technologiesContainer">
       <Heading text={longTitle} />
       <div className="iconsContainer">
-        {technologies.map(({ type, label }) => (
-          <div className="item" key={type}>
-            <ProjectItem icon={type} label={label} type="plain" />
-          </div>
+        {technologies.map(({ type, label }, index) => (
+          <Badge
+            key={index}
+            icon={type}
+            label={label}
+            type="oneColored"
+          />
         ))}
       </div>
     </div>

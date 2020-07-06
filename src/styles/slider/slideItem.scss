@@ -1,4 +1,5 @@
 @import "./../colors.scss";
+@import "./../mixins.scss";
 
 .slideItemContainer {
   width: 90%;
@@ -32,13 +33,8 @@
 
     & > .title {
       margin-bottom: 15px;
-      font-family: Ubuntu;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 120%;
+      @include typography(Ubuntu, normal, 500, 20px, 120%, $darkGrey);
       text-align: center;
-      color: $darkGrey;
     }
 
     & > .subtitle {

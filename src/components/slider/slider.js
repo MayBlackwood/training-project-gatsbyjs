@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import "./../../styles/slider/slider.scss";
 import Arrow from "./arrow";
 import SlideItem from "./slideItem";
@@ -36,9 +35,9 @@ const Slider = ({ items }) => {
           leftChevronWrapper: "leftArrow",
         }}
       >
-        {items.map(({imgUrl, title, subtitle}, i) => (
+        {items.map(({imgUrl, title, subtitle}, index) => (
           <SlideItem
-            key={i}
+            key={index}
             img={imgUrl}
             title={title}
             subtitle={subtitle}

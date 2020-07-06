@@ -1,33 +1,34 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 
 .companyProjectsContainer {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  // margin: 0 4%; -- find another solution
+  justify-content: center;
 
-  & > .item {
-    width: 30%;
-    height: 25%;
+  .itemsWrapper {
+    width: 85%;
+    height: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-  }
+    align-content: center;
+    & > .item {
+      width: 30%;
+      height: 25%;
+      display: flex;
+      align-items: center;
+    }
 
-  & > .item:nth-child(6n-3),
-  & > .item:nth-child(6n-4),
-  & > .item:nth-child(6n-5) {
-    flex-direction: row-reverse;
-  }
+    & > .item:nth-child(6n-3),
+    & > .item:nth-child(6n-4),
+    & > .item:nth-child(6n-5) {
+      flex-direction: row-reverse;
+    }
 
-  .companyProjectsText {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 41px;
-    color: $darkGrey;
+    .companyProjectsText {
+      @include typography(Ubuntu, normal, bold, 36px, 41px, $darkGrey);
+    }
   }
 }
