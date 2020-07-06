@@ -8,22 +8,23 @@ import SquareDecoration from "./../decoration/squareDecoration";
 
 const Slider = ({ items }) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+
   return (
     <div className="sliderContainer">
       <ItemsCarousel
         infiniteLoop
         placeholderItem={<div style={{ height: 200, background: "#EEE" }} />}
-        enablePlaceholder={true}
+        enablePlaceholder
         numberOfPlaceholderItems={3}
         numberOfCars={3}
         gutter={12}
         slidesToScroll={2}
         chevronWidth={60}
-        outsideChevron={true}
+        outsideChevron
         showSlither={false}
         firstAndLastGutter={false}
         activeItemIndex={activeItemIndex}
-        requestToChangeActive={value => setActiveItemIndex(value)}
+        requestToChangeActive={setActiveItemIndex}
         rightChevron={<Arrow direction="right" />}
         leftChevron={<Arrow direction="left" />}
         classes={{
@@ -35,12 +36,12 @@ const Slider = ({ items }) => {
           leftChevronWrapper: "leftArrow",
         }}
       >
-        {items.map((_, i) => (
+        {items.map(({imgUrl, title, subtitle}, i) => (
           <SlideItem
             key={i}
-            img={_.imgUrl}
-            title={_.title}
-            subtitle={_.subtitle}
+            img={imgUrl}
+            title={title}
+            subtitle={subtitle}
           />
         ))}
       </ItemsCarousel>
