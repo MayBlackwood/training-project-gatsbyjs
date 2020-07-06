@@ -3,7 +3,7 @@ import "./../../styles/controls/button.scss";
 
 const Button = ({ type, text, onClickHandler }) => {
   return (
-    <div className={`button ${type}`} onClick={onClickHandler}>
+    <div role="button" className={`button ${type}`} onClick={onClickHandler}>
       {text}
     </div>
   );

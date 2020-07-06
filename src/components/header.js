@@ -25,7 +25,7 @@ const Header = () => {
 
   const {
     healthTechPageData: {
-      frontmatter: { title, longTitle, description },
+      frontmatter: { longTitle, description },
     },
   } = data;
 

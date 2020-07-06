@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./../styles/teamSection.scss";
 import Heading from "./heading";
 import Slider from "./slider/slider";
