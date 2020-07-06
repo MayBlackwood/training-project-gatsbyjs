@@ -6,21 +6,19 @@ import Textarea from "./controls/textarea";
 import Button from "./controls/button";
 
 const MessageForm = () => {
-  const [nameVal, setNameVal] = useState("");
-  const [emailVal, setEmailVal] = useState("");
-  const [messageVal, setMessageVal] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const { name, email, message } = formData;
 
   const handleInputChange = ({ target: { name, value } }) => {
-    switch (name) {
-      case "name":
-        return setNameVal(value);
-      case "email":
-        return setEmailVal(value);
-    }
-  };
-
-  const handleMessageChange = e => {
-    setMessageVal(e.target.value);
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const confirmForm = () => {
@@ -53,13 +51,13 @@ const MessageForm = () => {
         <Input
           placeholder="Name"
           name="name"
-          value={nameVal}
+          value={name}
           changeHandler={handleInputChange}
         />
         <Input
           placeholder="E-mail"
           name="email"
-          value={emailVal}
+          value={email}
           changeHandler={handleInputChange}
         />
       </div>
@@ -67,8 +65,8 @@ const MessageForm = () => {
         <Textarea
           placeholder="Message"
           name="message"
-          value={messageVal}
-          changeHandler={handleMessageChange}
+          value={message}
+          changeHandler={handleInputChange}
           type="text"
         />
       </div>

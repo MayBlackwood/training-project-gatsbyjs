@@ -32,16 +32,14 @@ const TechnologiesSection = () => {
     <div className="technologiesContainer">
       <Heading text={longTitle} />
       <div className="iconsContainer">
-        {technologies.map((item, index) => {
-          return (
-              <Badge
-                key={index}
-                icon={item.type}
-                label={item.label}
-                type="oneColored"
-              />
-          );
-        })}
+        {technologies.map(({ type, label }, index) => (
+          <Badge
+            key={index}
+            icon={type}
+            label={label}
+            type="oneColored"
+          />
+        ))}
       </div>
     </div>
   );
