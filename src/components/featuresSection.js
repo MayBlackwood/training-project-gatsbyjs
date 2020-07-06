@@ -30,7 +30,6 @@ const FeaturesSection = () => {
     }
   `);
 
-
   return (
     <div className="featuresSectionContainer">
       <Heading text={longTitle} />

@@ -1,0 +1,55 @@
+@import "./../colors.scss";
+
+.slideItemContainer {
+  width: 90%;
+  height: 440px;
+  margin: 0 25px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  .slideItem {
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slideItem:hover {
+    cursor: pointer;
+    & ~ .slideLabel {
+      visibility: visible;
+      cursor: pointer;
+    }
+  }
+
+  .slideLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    visibility: hidden;
+
+    & > .title {
+      margin-bottom: 15px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      text-align: center;
+      color: $darkGrey;
+    }
+
+    & > .subtitle {
+      margin-bottom: 15px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      color: $lightGrey;
+    }
+  }
+}

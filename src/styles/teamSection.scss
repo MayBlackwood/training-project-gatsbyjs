@@ -1,0 +1,12 @@
+.teamSectionContainer {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .heading {
+    text-align: left;
+    padding: 0 400px;
+  }
+}
