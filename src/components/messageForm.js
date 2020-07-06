@@ -16,7 +16,6 @@ const MessageForm = () => {
   const { name, email, message } = formData;
 
   const handleInputChange = ({ target: { name, value } }) => {
-    console.log(formData);
     setFormData({
       ...formData,
       [name]: value,
@@ -38,7 +37,13 @@ const MessageForm = () => {
         message,
       },
     }).then(res => {
-      console.log(res);
+      //later notifications will be added
+      if (res.data.success) {
+        alert("Your message was sent.");
+        setFormData({ ...formData, name: "", email: "", message: "" });
+      } else {
+        alert("Error");
+      }
     });
   };
 
@@ -89,12 +94,7 @@ const MessageForm = () => {
           />
         </div>
         <div>
-          <Button
-            actionType="submit"
-            type="primary"
-            // onClickHandler={handleSubmit}
-            text="send"
-          />
+          <Button actionType="submit" type="primary" text="send" />
         </div>
       </form>
     </div>
