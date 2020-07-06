@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@import "./../colors.scss";
 
 .button {
   width: 200px;
@@ -13,7 +13,7 @@
   cursor: pointer;
 
   &.common {
-    background-color: #ffffff;
+    background-color: $white;
     border: 2px solid $darkGrey;
     color: $darkGrey;
   }
@@ -21,5 +21,16 @@
   &.common:hover {
     background: $lightGrey;
     color: $white;
+  }
+  &.primary {
+    background-color: $violet;
+    border: 2px solid $darkGrey;
+    color: $white;
+    border: none;
+  }
+
+  &.primary:hover {
+    background: $lightGrey;
+    color: $darkGrey;
   }
 }

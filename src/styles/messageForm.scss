@@ -1,0 +1,29 @@
+@import "./colors.scss";
+
+.messageFormContainer {
+  width: 420px;
+  height: 346px;
+  display: flex;
+  flex-direction: column;
+
+  .formLabel {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: $white;
+  }
+
+  .inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .messageInput {
+    margin-bottom: 40px;
+  }
+}

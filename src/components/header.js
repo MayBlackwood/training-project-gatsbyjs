@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import "./../styles/header.scss";
 import LeftColumnBottom from "./header/leftColumnBottom";
 import Logo from "./logo";
-import Button from "./button";
+import Button from "./controls/button";
 import RightColHeaderBackground from "./header/rightColHeaderBackground";
 import BlackSquare from "./decoration/blackSquare";
 
