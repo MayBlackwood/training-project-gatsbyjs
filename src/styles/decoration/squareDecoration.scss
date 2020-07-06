@@ -1,0 +1,25 @@
+@import "./../colors.scss";
+
+.square {
+  position: absolute;
+
+  &.black {
+    background: $darkGrey;
+  }
+
+  &.yellow {
+    background: $yellow;
+  }
+
+  &.violet {
+    background: $violet;
+  }
+
+  &.white {
+    background: $white;
+  }
+
+  &.red {
+    background: $red;
+  }
+}

@@ -1,0 +1,19 @@
+@import "./colors.scss";
+
+.stickerContainer {
+  width: auto;
+  height: auto;
+  background: $fogWhite;
+
+  .listContainer {
+    border-left: 15px solid $violet;
+    padding: 5px 0 5px 30px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 200%;
+    color: $lightGrey;
+    background: $white;
+  }
+}

@@ -4,7 +4,11 @@ import "./../styles/companyProjects.scss";
 import ProjectItem from "./projectItem";
 
 const CompanyProjects = () => {
-  const data = useStaticQuery(graphql`
+  const {
+    projectsData: {
+      frontmatter: { projectTypes },
+    },
+  } = useStaticQuery(graphql`
     {
       projectsData: markdownRemark(
         frontmatter: { name: { eq: "healthcare-project-types" } }
@@ -22,12 +26,6 @@ const CompanyProjects = () => {
       }
     }
   `);
-
-  const {
-    projectsData: {
-      frontmatter: { projectTypes },
-    },
-  } = data;
 
   return (
     <div className="companyProjectsContainer">

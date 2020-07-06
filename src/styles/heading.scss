@@ -1,0 +1,11 @@
+@import "./colors.scss";
+
+.heading {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: right;
+  color: $darkGrey;
+}

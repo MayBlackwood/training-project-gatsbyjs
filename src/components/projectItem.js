@@ -7,8 +7,12 @@ import careProviders from "./../images/doctor.png";
 import pharmacy from "./../images/snake.png";
 import healthcare from "./../images/rocket.png";
 import labs from "./../images/micro.png";
+import typescript from "./../images/typescript.png";
+import react from "./../images/react.png";
+import python from "./../images/python.png";
+import javascript from "./../images/javascript.png";
 
-const ProjectItem = ({ icon, label }) => {
+const ProjectItem = ({ icon, label, type }) => {
   const getImgUrl = name => {
     switch (name) {
       case "organizations":
@@ -25,6 +29,14 @@ const ProjectItem = ({ icon, label }) => {
         return healthcare;
       case "labs":
         return labs;
+      case "typescript":
+        return typescript;
+      case "react":
+        return react;
+      case "python":
+        return python;
+      case "javascript":
+        return javascript;
     }
   };
 
@@ -32,8 +44,14 @@ const ProjectItem = ({ icon, label }) => {
     <div className="itemContainer">
       <div className="iconContainer">
         <div className="containerBackground">
-          <div />
-          <div />
+          {type === "plain" ? (
+            <div className="plain" />
+          ) : (
+            <>
+              <div />
+              <div />
+            </>
+          )}
         </div>
         <div className="icon">
           <img src={getImgUrl(icon)} alt="" />
