@@ -30,13 +30,11 @@ const CompanyProjects = () => {
   return (
     <div className="companyProjectsContainer">
       <div className="item companyProjectsText">We work with</div>
-      {projectTypes.map(item => {
-        return (
-          <div className="item" key={item.type}>
-            <ProjectItem icon={item.type} label={item.label} />
-          </div>
-        );
-      })}
+      {projectTypes.map(({ type, label }) => (
+        <div className="item" key={type}>
+          <ProjectItem icon={type} label={label} />
+        </div>
+      ))}
     </div>
   );
 };
