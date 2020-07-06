@@ -1,0 +1,21 @@
+@import "./colors.scss";
+
+.infoTextContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 250px 0;
+
+  & > .text {
+    width: 50%;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 140%;
+    text-align: center;
+    color: $darkGrey;
+  }
+}

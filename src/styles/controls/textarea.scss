@@ -1,0 +1,16 @@
+@import "./../colors.scss";
+
+.textarea {
+  width: 390px;
+  height: 84px;
+  border: none;
+  padding: 8px 15px;
+  background: $darkText;
+  opacity: 0.5;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: $white;
+}
