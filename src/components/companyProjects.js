@@ -31,17 +31,11 @@ const CompanyProjects = () => {
     <div className="companyProjectsContainer">
       <div className="itemsWrapper">
         <div className="item companyProjectsText">We work with</div>
-        {projectTypes.map(item => {
-          return (
-            <div className="item" key={item.type}>
-              <Badge
-                icon={item.type}
-                label={item.label}
-                type="twoColored"
-              />
-            </div>
-          );
-        })}
+        {projectTypes.map(({ type, label }) => (
+          <div className="item" key={type}>
+            <Badge icon={type} label={label} type="twoColored" />
+          </div>
+        ))}
       </div>
     </div>
   );

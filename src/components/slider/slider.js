@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import "./../../styles/slider/slider.scss";
 import Arrow from "./arrow";
 import SlideItem from "./slideItem";
