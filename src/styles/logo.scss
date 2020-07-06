@@ -1,0 +1,18 @@
+.logoContainer {
+  width: auto;
+  margin-left: 180px;
+  margin-top: 40px;
+
+  .dashText {
+    margin-left: 1px;
+  }
+  .bouquetText {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      margin-right: 2px;
+    }
+  }
+}

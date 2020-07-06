@@ -1,0 +1,25 @@
+@import "./colors.scss";
+
+.button {
+  width: 200px;
+  height: 40px;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &.common {
+    background-color: #ffffff;
+    border: 2px solid $darkGrey;
+    color: $darkGrey;
+  }
+
+  &.common:hover {
+    background: $lightGrey;
+    color: $white;
+  }
+}

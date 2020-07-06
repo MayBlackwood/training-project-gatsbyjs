@@ -6,5 +6,22 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Ubuntu`],
+        display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
+};
