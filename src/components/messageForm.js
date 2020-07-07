@@ -31,16 +31,12 @@ const MessageForm = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      data: {
-        name,
-        email,
-        message,
-      },
+      data: formData,
     }).then(res => {
       //later notifications will be added
-      if (res.data.success) {
+      if (res.status === 200) {
         alert("Your message was sent.");
-        setFormData({ ...formData, name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "" });
       } else {
         alert("Error");
       }
