@@ -52,6 +52,7 @@ const Header = () => {
         <div className="servicesInfoContainer">
           <div className="text">{longTitle}</div>
           <Button
+            actionType="button"
             type="common"
             text="Let's talk"
             onClickHandler={onButtonCLick}

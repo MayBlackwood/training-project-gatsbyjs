@@ -53,6 +53,7 @@ const MobileDevSection = () => {
         <div className="review">
           <Quote text={quote} author={author} />
           <Button
+            actionType="button"
             type="common"
             onClickHandler={console.log("ds")}
             text="view more works"
